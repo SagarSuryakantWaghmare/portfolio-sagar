@@ -1,38 +1,156 @@
+import { AnimatedProfilePicture } from "./components/AnimatedProfilePicture";
+import { AnimatedText } from "./components/AnimatedText";
+import { GridWrapper } from "./components/GridWrapper";
+import { SectionTitlePill } from "./components/SectionTitlePill";
+import { AboutMeBento } from "./components/AboutMeBento";
+import { SkillsBento } from "./components/SkillsGridBento";
+import { ProjectCard } from "./components/ProjectCard";
+import { EducationCard } from "./components/EducationCard";
+import { ContactCard } from "./components/ContactCard";
+import siteMetadata from "./data/siteMetadata";
+
 export default function Home() {
+  const PROFILE_DELAY = 0;
+  const HEADING_DELAY = PROFILE_DELAY + 0.2;
+  const PARAGRAPH_DELAY = HEADING_DELAY + 0.1;
+
   return (
-    <main className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-black font-sans">
-      <div className="w-full max-w-3xl p-12">
-        <h1 className="text-4xl font-bold text-black dark:text-white">Sagar — Portfolio</h1>
-        <p className="mt-4 text-lg text-zinc-700 dark:text-zinc-300">
-          Hi — I&apos;m Sagar. This is a minimal portfolio page. I build things and
-          work on interesting projects.
-        </p>
+    <section className="pb-16">
+      <AnimatedProfilePicture delay={PROFILE_DELAY} />
+      <div className="mt-6 space-y-10 md:mt-0 md:space-y-16">
+        {/* Hero Section */}
+        <section>
+          <div className="relative text-balance">
+            <GridWrapper>
+              <AnimatedText
+                as="h1"
+                delay={HEADING_DELAY}
+                className="mx-auto max-w-2xl text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]"
+              >
+                Hey, I&apos;m Sagar! <br /> Welcome to my portfolio!
+              </AnimatedText>
+            </GridWrapper>
+            <GridWrapper>
+              <div className="mt-4 text-center md:mt-8">
+                <AnimatedText
+                  as="p"
+                  delay={PARAGRAPH_DELAY}
+                  className="leading-8 text-text-secondary"
+                >
+                  {siteMetadata.bio}
+                </AnimatedText>
+              </div>
+            </GridWrapper>
+          </div>
+        </section>
 
-        <div className="mt-6 space-y-3">
-          <a
-            href="#work"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            • View work
-          </a>
-          <a
-            href="#about"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            • About me
-          </a>
-          <a
-            href="#contact"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            • Contact
-          </a>
-        </div>
+        {/* About Section */}
+        <section id="about" className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4">
+            <GridWrapper>
+              <div className="text-center text-sm font-medium text-indigo-600">
+                <span>About</span>
+              </div>
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
+                Here&apos;s what sets me apart
+              </h2>
+            </GridWrapper>
+          </div>
 
-        <footer className="mt-12 text-sm text-zinc-600 dark:text-zinc-400">
-          Built with Next.js — replace this with your details.
-        </footer>
+          <GridWrapper>
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-12">
+              <div className="col-span-1 md:col-span-5">
+                <AboutMeBento />
+              </div>
+
+              <div className="md:col-span-7">
+                <SkillsBento />
+              </div>
+
+              <div className="md:col-span-6">
+                <ProjectCard projectIndex={0} />
+              </div>
+
+              <div className="md:col-span-6">
+                <ProjectCard projectIndex={1} />
+              </div>
+              
+              <div className="md:col-span-6">
+                <EducationCard />
+              </div>
+
+              <div className="md:col-span-6">
+                <ContactCard />
+              </div>
+            </div>
+          </GridWrapper>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4 text-balance">
+            <GridWrapper>
+              <SectionTitlePill title="Projects" />
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
+                Featured Work
+              </h2>
+            </GridWrapper>
+            <GridWrapper>
+              <p className="mx-auto max-w-2xl text-center leading-8 text-text-secondary">
+                Here are some of my recent projects showcasing full-stack development, AI integration, and modern web technologies.
+              </p>
+            </GridWrapper>
+          </div>
+
+          <GridWrapper>
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+              <ProjectCard projectIndex={0} />
+              <ProjectCard projectIndex={1} />
+            </div>
+          </GridWrapper>
+        </section>
+
+        {/* Education & Certifications */}
+        <section id="contact" className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4">
+            <GridWrapper>
+              <SectionTitlePill title="Background" />
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
+                Education & Continuous Learning
+              </h2>
+            </GridWrapper>
+          </div>
+
+          <GridWrapper>
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+              <EducationCard />
+              <div className="rounded-2xl border border-border-primary bg-bg-primary p-6">
+                <h3 className="mb-4 text-lg font-semibold text-text-primary">
+                  Certifications
+                </h3>
+                <div className="space-y-3">
+                  {siteMetadata.certifications.map((cert) => (
+                    <div key={cert.title} className="border-l-2 border-indigo-500 pl-3">
+                      <p className="font-medium text-text-primary text-sm">
+                        {cert.title}
+                      </p>
+                      <p className="text-xs text-text-tertiary">
+                        {cert.issuer} • {cert.year}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </GridWrapper>
+        </section>
       </div>
-    </main>
+    </section>
   );
 }

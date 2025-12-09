@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sagar Waghmare - Portfolio
 
-## Getting Started
+A modern, professional portfolio website built with Next.js 16, TypeScript, Tailwind CSS v3, and Framer Motion — inspired by braydoncoyer.dev's clean design aesthetic.
 
-First, run the development server:
+## ✨ Features
+
+- **Bento Grid Layout** - Modern card-based design with smooth hover effects
+- **Smooth Animations** - Powered by Framer Motion for elegant transitions
+- **Responsive Design** - Optimized for all devices with decorative grid borders
+- **Professional UI** - Clean, minimal interface with careful attention to typography and spacing
+- **SEO Optimized** - Proper meta tags and Open Graph configuration
+- **Type-Safe** - Built with TypeScript for better development experience
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16 (App Router with Turbopack)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 3.4.7
+- **Animations**: Framer Motion 12
+- **Fonts**: Geist Sans & Geist Mono
+- **Utilities**: clsx, tailwind-merge
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio-sagar.git
+
+# Navigate to project directory
+cd portfolio-sagar
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see your portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio-sagar/
+├── app/
+│   ├── components/          # Reusable UI components
+│   │   ├── AnimatedText.tsx
+│   │   ├── AnimatedProfilePicture.tsx
+│   │   ├── BentoCard.tsx
+│   │   ├── GridWrapper.tsx
+│   │   ├── SectionTitlePill.tsx
+│   │   ├── HorizontalLine.tsx
+│   │   ├── AboutMeBento.tsx
+│   │   ├── SkillsGridBento.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── EducationCard.tsx
+│   │   └── ContactCard.tsx
+│   ├── data/                # Site content and metadata
+│   │   └── siteMetadata.ts
+│   ├── lib/                 # Utility functions
+│   │   └── utils.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── public/
+│   └── images/
+│       └── profile.svg
+├── tailwind.config.ts
+└── package.json
+```
 
-## Learn More
+## 📝 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `app/data/siteMetadata.ts` to update:
+- Personal details (name, bio, contact info, location)
+- Social media links (GitHub, LinkedIn, LeetCode)
+- Education history with GPA and coursework
+- Technical skills organized by category
+- Project details with live URLs and GitHub repos
+- Certifications and achievements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Replace Profile Picture
 
-## Deploy on Vercel
+Replace `public/images/profile.svg` with your photo:
+- Recommended size: 200x200px or larger
+- Supported formats: JPG, PNG, SVG
+- Update the path in `AnimatedProfilePicture.tsx` if needed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Color Scheme
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Modify `tailwind.config.ts` to customize colors:
+```typescript
+colors: {
+  "bg-primary": "#F7F7F8",        // Background
+  "border-primary": "#D6DADE",    // Borders
+  "purple-primary": "#6C47FF",     // Accent color
+  "text-primary": colors.slate[900],
+  "text-secondary": "#5E5F6E",
+}
+```
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start development server (with Turbopack)
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import repository on [Vercel](https://vercel.com)
+3. Deploy with one click
+
+### Other Platforms
+
+Compatible with:
+- Netlify
+- Render
+- Railway
+- Cloudflare Pages
+
+## 👨‍💻 Author
+
+**Sagar Waghmare**
+- 📧 Email: sagarwaghmare1384@gmail.com
+- 📍 Location: Maharashtra, India
+- 🔗 GitHub: [@SagarSuryakantWaghmare](https://github.com/SagarSuryakantWaghmare)
+- 💼 LinkedIn: [sagarwaghmare44](https://www.linkedin.com/in/sagarwaghmare44)
+- 💻 LeetCode: [SagarSuryakantWaghmare](https://leetcode.com/u/SagarSuryakantWaghmare)
+- 📱 Phone: +91 7219330989
+
+## 🎓 Education
+
+**B.Tech in Computer Science** - Deogiri Institute of Engineering and Management Studies  
+GPA: 8.4/10.0 | 2022 – 2026
+
+## 🏆 Featured Projects
+
+- **ProCraft AI** - AI-powered resume builder (Next.js 15, Prisma, Clerk, Razorpay)
+- **The Digital Cart** - E-commerce platform (MERN Stack, Redux, JWT)
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Credits
+
+Design inspiration from [braydoncoyer.dev](https://braydoncoyer.dev) - check out Braydon's amazing work!
+
+---
+
+Built with ❤️ using Next.js 16 and Tailwind CSS 3
+
