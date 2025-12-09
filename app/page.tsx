@@ -112,6 +112,30 @@ export default function Home() {
               <ProjectCard projectIndex={1} />
             </div>
           </GridWrapper>
+
+          <GridWrapper>
+            <div className="flex justify-center">
+              <a
+                href="/projects"
+                className="inline-flex items-center rounded-full border border-border-primary bg-white px-6 py-3 text-sm font-medium text-text-primary hover:bg-bg-primary transition-all"
+              >
+                View All Projects
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </GridWrapper>
         </section>
 
         {/* Education & Certifications */}

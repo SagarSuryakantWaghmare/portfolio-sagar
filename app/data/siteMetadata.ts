@@ -81,7 +81,7 @@ export const siteMetadata = {
       ],
       liveUrl: "https://procraft-ai-resume.vercel.app",
       githubUrl: "https://github.com/SagarSuryakantWaghmare/ProCraft-AI",
-      image: "/projects/procraft-ai.png",
+      image: "/projects/procraft-ai.svg",
     },
     {
       title: "The Digital Cart — Premium E-commerce Platform",
@@ -103,7 +103,7 @@ export const siteMetadata = {
       ],
       liveUrl: "https://the-digital-cart.netlify.app",
       githubUrl: "https://github.com/SagarSuryakantWaghmare/The-Digital-Cart",
-      image: "/projects/digital-cart.png",
+      image: "/projects/digital-cart.svg",
     },
   ],
   
