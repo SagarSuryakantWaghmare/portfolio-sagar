@@ -25,7 +25,7 @@ export function SkillsBento({ linkTo }: SkillsBentoProps) {
           {allSkills.map((skill) => (
             <span
               key={skill}
-              className="rounded-lg bg-purple-secondary px-3 py-1.5 text-xs font-medium text-purple-primary"
+              className="rounded-lg bg-orange-secondary px-3 py-1.5 text-xs font-medium text-orange-primary"
             >
               {skill}
             </span>
