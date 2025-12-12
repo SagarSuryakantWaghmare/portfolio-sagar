@@ -7,15 +7,18 @@ import { SkillsBento } from "./components/SkillsGridBento";
 import { ProjectCard } from "./components/ProjectCard";
 import { EducationCard } from "./components/EducationCard";
 import { ContactCard } from "./components/ContactCard";
+import { PhotoGallery } from "./components/PhotoGallery";
+import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
 import siteMetadata from "./data/siteMetadata";
 
 export default function Home() {
   const PROFILE_DELAY = 0;
   const HEADING_DELAY = PROFILE_DELAY + 0.2;
   const PARAGRAPH_DELAY = HEADING_DELAY + 0.1;
+  const PHOTOS_DELAY = PARAGRAPH_DELAY + 0.1;
 
   return (
-    <section className="pb-16">
+    <section>
       <AnimatedProfilePicture delay={PROFILE_DELAY} />
       <div className="mt-6 space-y-10 md:mt-0 md:space-y-16">
         {/* Hero Section */}
@@ -41,6 +44,16 @@ export default function Home() {
                 </AnimatedText>
               </div>
             </GridWrapper>
+          </div>
+          
+          <div>
+            {/* Desktop Photos */}
+            <div className="relative hidden h-fit w-full items-center justify-center lg:flex">
+              <PhotoGallery animationDelay={PHOTOS_DELAY} />
+            </div>
+
+            {/* Mobile Photos */}
+            <AnimatedMobilePhotos delay={PHOTOS_DELAY} />
           </div>
         </section>
 

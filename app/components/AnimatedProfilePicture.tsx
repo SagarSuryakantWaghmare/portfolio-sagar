@@ -19,17 +19,38 @@ export function AnimatedProfilePicture({
         ease: "easeOut",
         delay,
       }}
-      className="flex justify-center pt-12"
+      className="relative my-5 md:mt-9"
     >
-      <div className="relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-border-primary ring-offset-4 ring-offset-bg-primary">
-        <Image
-          src="/images/profile.svg"
-          alt="Sagar Waghmare"
-          fill
-          className="object-cover"
-          priority
+      <motion.svg
+        className="mx-auto"
+        width="148"
+        height="148"
+        viewBox="0 0 148 148"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="74"
+          cy="74"
+          r="73.5"
+          stroke="#D6DADE"
+          strokeOpacity="0.5"
         />
-      </div>
+        <defs>
+          <clipPath id="circleClip">
+            <circle cx="74" cy="74" r="64" />
+          </clipPath>
+        </defs>
+        <image
+          href="/images/Sagar/photo1.jpg"
+          x="10"
+          y="10"
+          width="128"
+          height="128"
+          clipPath="url(#circleClip)"
+          preserveAspectRatio="xMidYMid slice"
+        />
+      </motion.svg>
     </motion.div>
   );
 }
