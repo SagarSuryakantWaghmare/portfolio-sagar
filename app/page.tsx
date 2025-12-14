@@ -67,35 +67,27 @@ export default function Home() {
             </GridWrapper>
             <GridWrapper>
               <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
-                Here&apos;s what sets me apart
+                Here&apos;s what sets me apart and makes me unique
               </h2>
             </GridWrapper>
           </div>
 
           <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-12">
-              <div className="col-span-1 md:col-span-5">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-12 lg:grid-rows-[14]">
+              <div className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6">
                 <AboutMeBento />
               </div>
 
-              <div className="md:col-span-7">
+              <div className="md:col-span-12 lg:col-span-7 lg:row-span-8">
                 <SkillsBento />
               </div>
 
-              <div className="md:col-span-6">
+              <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
                 <ProjectCard projectIndex={0} />
               </div>
 
-              <div className="md:col-span-6">
+              <div className="md:col-span-12 lg:col-span-7 lg:row-span-5">
                 <ProjectCard projectIndex={1} />
-              </div>
-              
-              <div className="md:col-span-6">
-                <EducationCard />
-              </div>
-
-              <div className="md:col-span-6">
-                <ContactCard />
               </div>
             </div>
           </GridWrapper>
@@ -105,26 +97,25 @@ export default function Home() {
         <section id="projects" className="relative space-y-10 md:space-y-16">
           <div className="space-y-4 text-balance">
             <GridWrapper>
-              <SectionTitlePill title="Projects" />
+              <div className="text-center text-sm font-medium text-indigo-600">
+                <span>Projects</span>
+              </div>
             </GridWrapper>
             <GridWrapper>
-              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
-                Featured Work
+              <h2 className="mx-auto max-w-lg text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:text-4xl">
+                Building scalable web applications with modern technologies
               </h2>
-            </GridWrapper>
-            <GridWrapper>
-              <p className="mx-auto max-w-2xl text-center leading-8 text-text-secondary">
-                Here are some of my recent projects showcasing full-stack development, AI integration, and modern web technologies.
-              </p>
             </GridWrapper>
           </div>
 
-          <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-              <ProjectCard projectIndex={0} />
-              <ProjectCard projectIndex={1} />
-            </div>
-          </GridWrapper>
+          <div className="z-10">
+            <GridWrapper>
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+                <ProjectCard projectIndex={0} />
+                <ProjectCard projectIndex={1} />
+              </div>
+            </GridWrapper>
+          </div>
 
           <GridWrapper>
             <div className="flex justify-center">
@@ -151,21 +142,23 @@ export default function Home() {
           </GridWrapper>
         </section>
 
-        {/* Education & Certifications */}
+        {/* Education & Contact Section */}
         <section id="contact" className="relative space-y-10 md:space-y-16">
-          <div className="space-y-4">
+          <div className="space-y-4 text-balance">
             <GridWrapper>
-              <SectionTitlePill title="Background" />
+              <div className="text-center text-sm font-medium text-indigo-600">
+                <span>Background</span>
+              </div>
             </GridWrapper>
             <GridWrapper>
-              <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary md:text-4xl">
-                Education & Continuous Learning
+              <h2 className="text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl">
+                Education, certifications && let&apos;s connect
               </h2>
             </GridWrapper>
           </div>
 
           <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
               <EducationCard />
               <div className="rounded-2xl border border-border-primary bg-bg-primary p-6">
                 <h3 className="mb-4 text-lg font-semibold text-text-primary">
@@ -173,7 +166,7 @@ export default function Home() {
                 </h3>
                 <div className="space-y-3">
                   {siteMetadata.certifications.map((cert) => (
-                    <div key={cert.title} className="border-l-2 border-indigo-500 pl-3">
+                    <div key={cert.title} className="border-l-2 border-orange-primary pl-3">
                       <p className="font-medium text-text-primary text-sm">
                         {cert.title}
                       </p>
@@ -184,6 +177,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              <ContactCard />
             </div>
           </GridWrapper>
         </section>
