@@ -1,14 +1,15 @@
 import { AnimatedProfilePicture } from "./components/AnimatedProfilePicture";
 import { AnimatedText } from "./components/AnimatedText";
 import { GridWrapper } from "./components/GridWrapper";
-import { SectionTitlePill } from "./components/SectionTitlePill";
 import { AboutMeBento } from "./components/AboutMeBento";
-import { SkillsBento } from "./components/SkillsGridBento";
 import { ProjectCard } from "./components/ProjectCard";
 import { EducationCard } from "./components/EducationCard";
 import { ContactCard } from "./components/ContactCard";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
+import { ConnectionsBento } from "./components/ConnectionsBento";
+import { ToolboxBento } from "./components/ToolboxBento";
+import { CalendarBento } from "./components/CalendarBento";
 import siteMetadata from "./data/siteMetadata";
 
 export default function Home() {
@@ -75,19 +76,19 @@ export default function Home() {
           <GridWrapper>
             <div className="grid grid-cols-1 gap-2 md:grid-cols-12 lg:grid-rows-[14]">
               <div className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6">
-                <AboutMeBento />
+                <AboutMeBento linkTo="/about" />
               </div>
 
               <div className="md:col-span-12 lg:col-span-7 lg:row-span-8">
-                <SkillsBento />
+                <ConnectionsBento linkTo="/connections" />
               </div>
 
               <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
-                <ProjectCard projectIndex={0} />
+                <ToolboxBento linkTo="/toolbox" />
               </div>
 
               <div className="md:col-span-12 lg:col-span-7 lg:row-span-5">
-                <ProjectCard projectIndex={1} />
+                <CalendarBento />
               </div>
             </div>
           </GridWrapper>
