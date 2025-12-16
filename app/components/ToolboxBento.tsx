@@ -1,10 +1,6 @@
 import { BentoCard } from "./BentoCard";
 
-const toolboxItems = [
-  {
-    title: "VS Code",
-    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  },
+const skillsItems = [
   {
     title: "React",
     imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -21,9 +17,13 @@ const toolboxItems = [
     title: "Node.js",
     imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
+  {
+    title: "MongoDB",
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
 ];
 
-const items = toolboxItems
+const items = skillsItems
   .map((item, index) => (
     <div key={item.title} className="group inline-block text-center">
       <div
@@ -56,9 +56,9 @@ export function ToolboxBento({ linkTo }: { linkTo?: string }) {
       <div className="group-hover:from-bg-white absolute inset-y-0 left-0 z-20 w-1/5 bg-gradient-to-r from-bg-primary to-transparent"></div>
       <div className="group-hover:from-bg-white absolute inset-y-0 right-0 z-20 w-1/5 bg-gradient-to-l from-bg-primary to-transparent"></div>
       <div className="z-20 text-center">
-        <h2 className="text-base font-medium">Toolbox</h2>
+        <h2 className="text-base font-medium">Skills</h2>
         <p className="mt-1 text-text-secondary">
-          Check out my favorite tools and technologies.
+          Check out my technical skills and technologies.
         </p>
       </div>
       <div className="mt-10 flex items-center justify-center gap-3 transition-all duration-500 ease-in-out md:mt-12">

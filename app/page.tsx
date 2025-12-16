@@ -84,7 +84,7 @@ export default function Home() {
               </div>
 
               <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
-                <ToolboxBento linkTo="/toolbox" />
+                <ToolboxBento linkTo="/skills" />
               </div>
 
               <div className="md:col-span-12 lg:col-span-7 lg:row-span-5">
