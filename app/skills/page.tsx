@@ -142,35 +142,27 @@ export default function SkillsPage() {
         return (
           <section key={category} className="space-y-8">
             <GridWrapper>
-              <h2 className="text-2xl font-medium text-text-primary">
-                {category}
-              </h2>
+              <div className="text-center text-sm font-medium text-orange-primary">
+                <span>{category}</span>
+              </div>
             </GridWrapper>
             <GridWrapper>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-                {categorySkills.map((skill, index) => (
-                  <div
-                    key={skill.title}
-                    className="group relative"
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                    }}
-                  >
-                    <div className="rounded-[20px] border border-border-primary bg-bg-primary p-3 transition-all duration-500 hover:border-orange-primary hover:-translate-y-2 hover:shadow-lg">
+              <div className="grid grid-cols-3 place-items-center gap-6 md:grid-cols-4 lg:grid-cols-8">
+                {categorySkills.map((skill) => (
+                  <div key={skill.title} className="group inline-block text-center">
+                    <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-orange-primary">
                       <div
-                        className="grid h-32 place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
+                        className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                         style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
                       >
                         <img
-                          className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"
+                          className="h-10 w-10"
                           alt={skill.title}
                           src={skill.imgSrc}
                         />
                       </div>
-                      <p className="mt-3 text-center text-sm font-medium text-text-primary">
-                        {skill.title}
-                      </p>
                     </div>
+                    <p className="mt-3 text-sm text-gray-500">{skill.title}</p>
                   </div>
                 ))}
               </div>

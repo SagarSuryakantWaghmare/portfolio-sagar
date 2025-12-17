@@ -1,45 +1,48 @@
-"use client";
-
 import { BentoCard } from "./BentoCard";
-import siteMetadata from "@/app/data/siteMetadata";
 
-interface AboutMeBentoProps {
-  linkTo?: string;
+function getTimeOfDayGreeting() {
+  const now = new Date();
+  const hours = now.getHours();
+
+  if (hours < 12) {
+    return "Good morning!";
+  } else if (hours < 17) {
+    return "Good afternoon!";
+  } else {
+    return "Good evening!";
+  }
 }
 
-export function AboutMeBento({ linkTo }: AboutMeBentoProps) {
+export function AboutMeBento({ linkTo }: { linkTo?: string }) {
+  const timeOfDayGreeting = getTimeOfDayGreeting();
+
   return (
-    <BentoCard linkTo={linkTo} className="h-full">
-      <div className="flex h-full flex-col justify-between">
-        <div>
-          <h3 className="mb-2 text-lg font-semibold text-text-primary">
-            About Me
-          </h3>
-          <p className="text-sm leading-relaxed text-text-secondary">
-            {siteMetadata.bio.substring(0, 180)}...
+    <BentoCard height="h-[275px] md:h-[304px] lg:h-[220px]" linkTo={linkTo}>
+      <div className="group flex h-full">
+        <div className="text-balance">
+          <h2 className="mb-4 text-base font-medium">Learn more about me</h2>
+          <p className="mb-2 text-balance pr-1 text-text-secondary md:pr-4">
+            {timeOfDayGreeting} <br />
+            I&apos;m Sagar, a full-stack developer.
           </p>
         </div>
-        <div className="mt-4 flex items-center gap-2 text-xs text-text-tertiary">
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-          <span>{siteMetadata.location}</span>
+        <div className="relative">
+          <div className="group inline-block text-center">
+            <div
+              className="rounded-[20px] border border-border-primary p-2 transition-all duration-500 ease-out group-hover:border-orange-primary"
+              style={{ width: 188, height: 278 }}
+            >
+              <div
+                className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
+                style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
+              ></div>
+            </div>
+          </div>
+          <img
+            className="absolute -top-1 left-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow transition-all duration-500 group-hover:rotate-[4deg] group-hover:scale-105"
+            src="/images/Sagar/photo1.jpg"
+            alt="Profile photo"
+          />
         </div>
       </div>
     </BentoCard>
