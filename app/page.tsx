@@ -10,6 +10,8 @@ import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
 import { ConnectionsBento } from "./components/ConnectionsBento";
 import { ToolboxBento } from "./components/ToolboxBento";
 import { CalendarBento } from "./components/CalendarBento";
+import { ChangelogBento } from "./components/ChangelogBento";
+import { CommunityWallBento } from "./components/CommunityWallBento";
 import siteMetadata from "./data/siteMetadata";
 
 export default function Home() {
@@ -139,6 +141,45 @@ export default function Home() {
                   />
                 </svg>
               </a>
+            </div>
+          </GridWrapper>
+        </section>
+
+        {/* My Site Section */}
+        <section className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4 text-balance">
+            <GridWrapper>
+              <div className="text-center text-sm font-medium text-indigo-600">
+                <span>My Site</span>
+              </div>
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl">
+                My site is a playful sandbox. Explore, experiment, && say hello
+              </h2>
+            </GridWrapper>
+          </div>
+
+          <GridWrapper>
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+              <span className="col-span-1 h-[276px] sm:block md:hidden lg:block">
+                <ChangelogBento />
+              </span>
+              <CommunityWallBento />
+              <div className="rounded-2xl border border-border-primary bg-bg-primary p-6">
+                <h3 className="mb-4 text-lg font-semibold text-text-primary">
+                  Let&apos;s Connect
+                </h3>
+                <p className="text-text-secondary mb-6">
+                  Interested in collaborating on a project or just want to chat about tech? Feel free to reach out!
+                </p>
+                <a
+                  href="mailto:{siteMetadata.email}"
+                  className="inline-flex items-center rounded-full border border-orange-primary bg-orange-primary px-6 py-3 text-sm font-medium text-white hover:bg-orange-600 transition-all"
+                >
+                  Send Message
+                </a>
+              </div>
             </div>
           </GridWrapper>
         </section>

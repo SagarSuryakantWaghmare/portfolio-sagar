@@ -12,7 +12,7 @@ type Connection = {
 
 export const metadata: Metadata = {
   title: "Connections | Sagar Waghmare",
-  description: "An evolving list of people I've met and those I wish to meet",
+  description: "Professionals and teammates I've collaborated with on projects and initiatives",
 };
 
 const connections: Connection[] = [
@@ -114,7 +114,7 @@ export default function ConnectionsPage() {
     <div className="relative space-y-16">
       <GridWrapper>
         <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
-          An evolving list of people I&apos;ve met and those I wish to meet.
+          Professionals and teammates I&apos;ve collaborated with on projects and initiatives.
         </h1>
       </GridWrapper>
 
