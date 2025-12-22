@@ -64,7 +64,7 @@ export default function Home() {
         <section id="about" className="relative space-y-10 md:space-y-16">
           <div className="space-y-4">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
+              <div className="text-center text-sm font-medium text-orange-primary">
                 <span>About</span>
               </div>
             </GridWrapper>
@@ -100,7 +100,7 @@ export default function Home() {
         <section id="projects" className="relative space-y-10 md:space-y-16">
           <div className="space-y-4 text-balance">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
+              <div className="text-center text-sm font-medium text-orange-primary">
                 <span>Projects</span>
               </div>
             </GridWrapper>
@@ -149,7 +149,7 @@ export default function Home() {
         <section className="relative space-y-10 md:space-y-16">
           <div className="space-y-4 text-balance">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
+              <div className="text-center text-sm font-medium text-orange-primary">
                 <span>My Site</span>
               </div>
             </GridWrapper>
@@ -188,7 +188,7 @@ export default function Home() {
         <section id="contact" className="relative space-y-10 md:space-y-16">
           <div className="space-y-4 text-balance">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
+              <div className="text-center text-sm font-medium text-orange-primary">
                 <span>Background</span>
               </div>
             </GridWrapper>

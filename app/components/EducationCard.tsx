@@ -15,7 +15,7 @@ export function EducationCard({ linkTo }: EducationCardProps) {
       <div className="flex h-full flex-col">
         <div className="mb-1 flex items-center gap-2">
           <svg
-            className="h-5 w-5 text-indigo-600"
+            className="h-5 w-5 text-orange-primary"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

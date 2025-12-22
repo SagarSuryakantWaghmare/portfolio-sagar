@@ -70,7 +70,7 @@ export default function ProjectPage() {
                   {project.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <svg
-                        className="mt-1 h-4 w-4 flex-shrink-0 text-indigo-600"
+                        className="mt-1 h-4 w-4 flex-shrink-0 text-orange-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ export default function ProjectPage() {
                 {/* Links */}
                 <div className="flex flex-wrap gap-4">
                   <a
-                    className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-700 transition-colors"
+                    className="inline-flex items-center text-sm font-medium text-orange-primary hover:text-orange-600 transition-colors"
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
