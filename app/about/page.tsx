@@ -248,12 +248,12 @@ export default function AboutPage() {
           <div className="space-y-4">
             <GridWrapper>
               <div className="text-center text-sm font-medium text-indigo-600">
-                <span>Education & Skills</span>
+                <span>Education & Certifications</span>
               </div>
             </GridWrapper>
             <GridWrapper>
               <h2 className="mx-auto max-w-lg text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary">
-                My academic background and technical expertise
+                My academic background and professional certifications
               </h2>
             </GridWrapper>
           </div>
@@ -271,30 +271,6 @@ export default function AboutPage() {
                   <p className="text-sm text-text-tertiary">{edu.period} • GPA: {edu.gpa}</p>
                 </div>
               ))}
-            </div>
-
-            {/* Technical Skills */}
-            <div className="rounded-2xl border border-border-primary bg-bg-primary p-8">
-              <h3 className="mb-6 text-2xl font-semibold text-text-primary">Technical Skills</h3>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {Object.entries(siteMetadata.skills).map(([category, skills]) => (
-                  <div key={category}>
-                    <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-text-secondary">
-                      {category}
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {(skills as string[]).map((skill) => (
-                        <span
-                          key={skill}
-                          className="rounded-lg bg-orange-secondary px-3 py-1.5 text-xs font-medium text-orange-primary"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Certifications */}
