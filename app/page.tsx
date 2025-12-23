@@ -12,6 +12,7 @@ import { ToolboxBento } from "./components/ToolboxBento";
 import { CalendarBento } from "./components/CalendarBento";
 import { ChangelogBento } from "./components/ChangelogBento";
 import { CommunityWallBento } from "./components/CommunityWallBento";
+import GithubContributions from "./components/github-contributions";
 import siteMetadata from "./data/siteMetadata";
 
 export default function Home() {
@@ -141,6 +142,15 @@ export default function Home() {
                   />
                 </svg>
               </a>
+            </div>
+          </GridWrapper>
+        </section>
+
+        {/* GitHub Contributions Section */}
+        <section className="relative space-y-10 md:space-y-16">
+          <GridWrapper>
+            <div className="rounded-2xl border border-border-primary bg-[#f6f8fa] p-6 md:p-8">
+              <GithubContributions />
             </div>
           </GridWrapper>
         </section>

@@ -50,10 +50,10 @@ const footerSections: FooterSection[] = [
     ],
   },
   {
-    title: "Education",
+    title: "More",
     links: [
-      { href: "/#education", label: "Certifications" },
-      { href: "/#education", label: "Achievements" },
+      { href: "/skills", label: "Skills" },
+      { href: "/connections", label: "Connections" },
     ],
   },
 ];
