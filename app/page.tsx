@@ -149,7 +149,7 @@ export default function Home() {
         {/* GitHub Contributions Section */}
         <section className="relative space-y-10 md:space-y-16">
           <GridWrapper>
-            <div className="rounded-2xl border border-border-primary bg-[#f6f8fa] p-6 md:p-8">
+            <div className="rounded-2xl border border-border-primary bg-[#f6f8fa] p-4 md:p-6">
               <GithubContributions />
             </div>
           </GridWrapper>

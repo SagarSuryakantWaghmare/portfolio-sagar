@@ -36,25 +36,25 @@ export default function GithubStats({ contributions }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-4 mt-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
       <StatItem title="This year">
         <AnimatedNumber number={totalContributions} />
-        <span className="text-text-secondary"> contributions</span>
+        <span className="text-text-secondary text-sm"> contributions</span>
       </StatItem>
       <StatItem title="Longest Streak">
         <AnimatedNumber number={streak.longestStreak} />
-        <span className="text-text-secondary"> days</span>
+        <span className="text-text-secondary text-sm"> days</span>
       </StatItem>
       <StatItem title="Best day">
-        <span className="text-text-secondary">
+        <span className="text-text-secondary text-sm">
           {hasValidBestDayDate ? formatDate(bestDayDate as Date) : "N/A"} —
         </span>
         <AnimatedNumber number={bestDay.count} />
-        <span className="text-text-secondary"> contributions</span>
+        <span className="text-text-secondary text-sm"> contributions</span>
       </StatItem>
       <StatItem title="Average">
         <AnimatedNumber number={Math.round(averageContribution * 100) / 100} />
-        <span className="text-text-secondary"> contributions / day</span>
+        <span className="text-text-secondary text-sm"> / day</span>
       </StatItem>
     </div>
   );

@@ -44,7 +44,7 @@ export default function Contributions() {
   if (!contributions || isLoading) {
     return (
       <div className="flex flex-col space-y-4">
-        <div className="flex space-x-4">
+        <div className="flex items-start gap-3 overflow-x-auto pb-2">
           <Days />
           <GithubCalendarSkeleton />
           <YearSelect selectedYear={year} onYearChange={setYear} />
@@ -56,7 +56,7 @@ export default function Contributions() {
 
   return (
     <Fragment>
-      <div className="flex justify-center p-4 px-0 md:px-8">
+      <div className="flex items-start gap-3 overflow-x-auto pb-2">
         <Days />
         <Calendar contributions={contributions} />
         <YearSelect selectedYear={year} onYearChange={setYear} />

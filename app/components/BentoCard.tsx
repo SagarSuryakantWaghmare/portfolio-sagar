@@ -55,7 +55,7 @@ export function BentoCard({
         </div>
       )}
       {showHoverGradient && (
-        <div className="user-select-none pointer-events-none absolute inset-0 z-30 bg-gradient-to-tl from-orange-primary/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></div>
+        <div className="user-select-none pointer-events-none absolute inset-0 z-30 bg-gradient-to-tl from-orange-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></div>
       )}
       {children}
     </div>

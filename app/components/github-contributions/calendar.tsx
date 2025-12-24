@@ -18,21 +18,21 @@ export default function Calendar({ contributions }: Props) {
   return (
     <div
       ref={ref}
-      className="relative flex flex-1 flex-col mx-5 space-y-4 max-w-[250px] md:max-w-lg xl:max-w-7xl transition-all"
+      className="relative flex flex-1 flex-col space-y-3 w-full"
     >
-      <ul className="flex justify-end gap-[3px] overflow-hidden text-xs text-text-tertiary md:justify-center">
+      <ul className="flex gap-[4px] text-sm text-text-tertiary">
         {months.map((month) => (
           <li
             key={month.firstDay}
             className={clsx(month.totalWeeks < 2 && "invisible")}
-            style={{ minWidth: 18.3 * month.totalWeeks }}
+            style={{ minWidth: `${month.totalWeeks * 19}px` }}
           >
             {month.name}
           </li>
         ))}
       </ul>
 
-      <div className="w-full flex justify-center gap-[6px] overflow-hidden">
+      <div className="flex gap-[4px]">
         {weeks?.map((week) => (
           <div key={week.firstDay} className="flex flex-col gap-[4px]">
             {week.contributionDays.map((contribution) => {
@@ -57,7 +57,7 @@ export default function Calendar({ contributions }: Props) {
                           transition: { delay: randomizedDelay },
                         },
                       }}
-                      className="block h-[12px] w-[12px] rounded-[2px] bg-[#ebedf0]"
+                      className="block h-[15px] w-[15px] rounded-[2px] bg-[#ebedf0]"
                       style={
                         backgroundColor ? { backgroundColor } : undefined
                       }
@@ -73,11 +73,11 @@ export default function Calendar({ contributions }: Props) {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-start gap-2 mt-1">
+      <div className="flex flex-wrap items-center justify-start gap-2 mt-2">
         <div className="flex items-center gap-2 text-sm">
           <span className="text-text-tertiary">Less</span>
-          <ul className="flex gap-[3px]">
-            <motion.li className="h-[10px] w-[10px] rounded-[2px] bg-[#ebedf0]" />
+          <ul className="flex gap-[4px]">
+            <motion.li className="h-[12px] w-[12px] rounded-[2px] bg-[#ebedf0]" />
             {colors.map((item, index) => (
               <motion.li
                 key={item}
@@ -90,7 +90,7 @@ export default function Calendar({ contributions }: Props) {
                     transition: { delay: index * 0.5 },
                   },
                 }}
-                className="h-[10px] w-[10px] rounded-[2px]"
+                className="h-[12px] w-[12px] rounded-[2px]"
                 style={{ backgroundColor: item }}
               />
             ))}

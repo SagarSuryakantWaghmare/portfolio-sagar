@@ -155,7 +155,7 @@ export default function ConnectionsPage() {
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
                   >
                     <img
-                      className={`h-14 w-14 rounded transition-all duration-300 ${
+                      className={`h-14 w-14 rounded-full transition-all duration-300 ${
                         !person.isConnected ? "grayscale" : ""
                       }`}
                       alt={person.name}
