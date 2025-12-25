@@ -193,46 +193,6 @@ export default function Home() {
             </div>
           </GridWrapper>
         </section>
-
-        {/* Education & Contact Section */}
-        <section id="contact" className="relative space-y-10 md:space-y-16">
-          <div className="space-y-4 text-balance">
-            <GridWrapper>
-              <div className="text-center text-sm font-medium text-orange-primary">
-                <span>Background</span>
-              </div>
-            </GridWrapper>
-            <GridWrapper>
-              <h2 className="text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl">
-                Education, certifications && let&apos;s connect
-              </h2>
-            </GridWrapper>
-          </div>
-
-          <GridWrapper>
-            <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-              <EducationCard />
-              <div className="rounded-2xl border border-border-primary bg-bg-primary p-6">
-                <h3 className="mb-4 text-lg font-semibold text-text-primary">
-                  Certifications
-                </h3>
-                <div className="space-y-3">
-                  {siteMetadata.certifications.map((cert) => (
-                    <div key={cert.title} className="border-l-2 border-orange-primary pl-3">
-                      <p className="font-medium text-text-primary text-sm">
-                        {cert.title}
-                      </p>
-                      <p className="text-xs text-text-tertiary">
-                        {cert.issuer} • {cert.year}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <ContactCard />
-            </div>
-          </GridWrapper>
-        </section>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { GridWrapper } from "../components/GridWrapper";
 import { Photo } from "../components/Photo";
 import { AboutTrackPattern } from "../components/AboutTrackPattern";
 import { Resume } from "../components/Resume";
+import { EducationTimeline } from "../components/EducationTimeline";
 import siteMetadata from "../data/siteMetadata";
 
 export const metadata = {
@@ -248,12 +249,33 @@ export default function AboutPage() {
           <div className="space-y-4">
             <GridWrapper>
               <div className="text-center text-sm font-medium text-orange-primary">
-                <span>Education & Certifications</span>
+                <span>Education</span>
               </div>
             </GridWrapper>
             <GridWrapper>
               <h2 className="mx-auto max-w-lg text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary">
-                My academic background and professional certifications
+                My academic journey and educational achievements.
+              </h2>
+            </GridWrapper>
+          </div>
+        </div>
+        <div className="space-y-16">
+          <GridWrapper>
+            <EducationTimeline />
+          </GridWrapper>
+        </div>
+
+        {/* Certifications */}
+        <div className="relative space-y-8 text-center">
+          <div className="space-y-4">
+            <GridWrapper>
+              <div className="text-center text-sm font-medium text-orange-primary">
+                <span>Certifications</span>
+              </div>
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary">
+                Professional certifications and achievements
               </h2>
             </GridWrapper>
           </div>
@@ -261,21 +283,8 @@ export default function AboutPage() {
 
         <GridWrapper>
           <div className="space-y-8">
-            {/* Education */}
-            <div className="rounded-2xl border border-border-primary bg-bg-primary p-8">
-              <h3 className="mb-6 text-2xl font-semibold text-text-primary">Education</h3>
-              {siteMetadata.education.map((edu, index) => (
-                <div key={index} className="mb-6 border-l-4 border-orange-primary pl-6">
-                  <h4 className="text-lg font-semibold text-text-primary">{edu.degree}</h4>
-                  <p className="text-text-secondary">{edu.institution}</p>
-                  <p className="text-sm text-text-tertiary">{edu.period} • GPA: {edu.gpa}</p>
-                </div>
-              ))}
-            </div>
-
             {/* Certifications */}
             <div className="rounded-2xl border border-border-primary bg-bg-primary p-8">
-              <h3 className="mb-6 text-2xl font-semibold text-text-primary">Certifications</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 {siteMetadata.certifications.map((cert, index) => (
                   <div key={index} className="border-l-4 border-orange-primary pl-6">
