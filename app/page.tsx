@@ -3,8 +3,6 @@ import { AnimatedText } from "./components/AnimatedText";
 import { GridWrapper } from "./components/GridWrapper";
 import { AboutMeBento } from "./components/AboutMeBento";
 import { ProjectCard } from "./components/ProjectCard";
-import { EducationCard } from "./components/EducationCard";
-import { ContactCard } from "./components/ContactCard";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
 import { ConnectionsBento } from "./components/ConnectionsBento";
@@ -13,6 +11,7 @@ import { CalendarBento } from "./components/CalendarBento";
 import { ChangelogBento } from "./components/ChangelogBento";
 import { CommunityWallBento } from "./components/CommunityWallBento";
 import GithubContributions from "./components/github-contributions";
+import LeetCodeStatistics from "./components/leetcode-stats";
 import siteMetadata from "./data/siteMetadata";
 
 export default function Home() {
@@ -148,9 +147,44 @@ export default function Home() {
 
         {/* GitHub Contributions Section */}
         <section className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4 text-balance">
+            <GridWrapper>
+              <div className="text-center text-sm font-medium text-orange-primary">
+                <span>Contributions</span>
+              </div>
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:text-4xl">
+                My coding journey tracked through daily contributions
+              </h2>
+            </GridWrapper>
+          </div>
+
           <GridWrapper>
-            <div className="rounded-2xl border border-border-primary bg-[#f6f8fa] p-4 md:p-6">
+            <div className="rounded-2xl border border-border-primary bg-white p-6 md:p-8">
               <GithubContributions />
+            </div>
+          </GridWrapper>
+        </section>
+
+        {/* LeetCode Statistics Section */}
+        <section className="relative space-y-10 md:space-y-16">
+          <div className="space-y-4 text-balance">
+            <GridWrapper>
+              <div className="text-center text-sm font-medium text-orange-primary">
+                <span>Coding Practice</span>
+              </div>
+            </GridWrapper>
+            <GridWrapper>
+              <h2 className="mx-auto max-w-lg text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:text-4xl">
+                Sharpening my problem-solving skills one challenge at a time
+              </h2>
+            </GridWrapper>
+          </div>
+
+          <GridWrapper>
+            <div className="rounded-2xl border border-border-primary bg-white p-6 md:p-8">
+              <LeetCodeStatistics />
             </div>
           </GridWrapper>
         </section>

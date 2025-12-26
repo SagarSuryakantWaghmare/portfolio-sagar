@@ -78,11 +78,10 @@ export const getContributions = cache(
     const today = new Date();
     const currentYear = today.getFullYear();
 
-    let from: string;
     let to: string;
 
     // Always fetch Jan 1 to Dec 31 for any year
-    from = new Date(year, 0, 1).toISOString();
+    const from = new Date(year, 0, 1).toISOString();
     
     if (year === currentYear) {
       // For current year, fetch up to today

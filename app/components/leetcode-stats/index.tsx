@@ -1,17 +1,17 @@
-import Contributions from "./contributions";
+import LeetCodeStats from "./leetcode-stats";
 
-export default function GithubContributions() {
+export default function LeetCodeStatistics() {
   return (
     <section className="space-y-5">
       <div>
         <p className="text-2xl font-medium leading-9 tracking-tight text-text-primary">
-          Github
+          LeetCode
         </p>
         <p className="text-text-tertiary leading-4">
-          Contributions Stats
+          Coding Statistics
         </p>
       </div>
-      <Contributions />
+      <LeetCodeStats />
     </section>
   );
 }
