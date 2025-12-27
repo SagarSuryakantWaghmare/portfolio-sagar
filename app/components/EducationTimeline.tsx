@@ -7,14 +7,18 @@ export function EducationTimeline() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="relative">
           <div className="divide-y divide-gray-100">
-            {siteMetadata.education.map((edu) => (
+            {siteMetadata.education.map((edu, index) => (
               <div
                 key={edu.institution}
-                className="grid grid-cols-[1fr,5fr] gap-6 py-12 first:pt-0 last:pb-0 md:grid-cols-[4fr,1fr,2fr]"
+                className="grid grid-cols-[5fr,1fr] gap-6 py-12 first:pt-0 last:pb-0 md:grid-cols-[4fr,1fr,2fr]"
               >
                 <div className="space-y-6">
                   <div className="space-y-4">
-                    <h4 className="text-lg font-semibold">
+                    <div className="md:hidden">
+                      <h3 className="text-xl font-bold">{edu.degree}</h3>
+                      <p className="text-sm text-gray-600">{edu.period}</p>
+                    </div>
+                    <h4 className="hidden text-lg font-semibold md:block">
                       {edu.degree}
                     </h4>
                     <div className="space-y-3">
@@ -22,25 +26,30 @@ export function EducationTimeline() {
                         {edu.institution}
                       </p>
                       {edu.gpa && (
-                        <p className="text-sm text-gray-500">
-                          GPA: {edu.gpa}
+                        <p className="text-gray-600">
+                          <span className="font-semibold">GPA:</span> {edu.gpa}
                         </p>
                       )}
                       {edu.percentage && (
-                        <p className="text-sm text-gray-500">
-                          Percentage: {edu.percentage}
+                        <p className="text-gray-600">
+                          <span className="font-semibold">Percentage:</span> {edu.percentage}
+                        </p>
+                      )}
+                      {edu.subject && (
+                        <p className="text-gray-600">
+                          <span className="font-semibold">Subject:</span> {edu.subject}
                         </p>
                       )}
                       {edu.coursework && edu.coursework.length > 0 && (
-                        <div className="mt-4">
-                          <p className="mb-2 text-sm font-semibold text-gray-700">
+                        <div className="space-y-2">
+                          <p className="font-semibold text-gray-700">
                             Key Coursework:
                           </p>
-                          <ul className="list-inside list-disc space-y-1 text-sm text-gray-600">
+                          <div className="space-y-3">
                             {edu.coursework.map((course, i) => (
-                              <li key={i}>{course}</li>
+                              <p key={i} className="text-gray-600">{course}</p>
                             ))}
-                          </ul>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -50,14 +59,15 @@ export function EducationTimeline() {
                 <div />
 
                 <div className="hidden md:block">
-                  <p className="text-sm font-medium text-gray-600">{edu.period}</p>
+                  <h3 className="text-xl font-bold">{edu.degree}</h3>
+                  <p className="text-sm text-gray-600">{edu.period}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="absolute top-0 h-full w-8 md:right-[calc(28%_-_1rem)]">
-            <Timeline avatarUrl={siteMetadata.education[0]?.institution ? "/images/Sagar/photo3.jpg" : "/images/Sagar/photo1.jpg"} />
+          <div className="hidden md:block absolute top-0 h-full w-8 md:right-[calc(28%_-_1rem)]">
+            <Timeline avatarUrl="/images/Sagar/photo3.jpg" />
           </div>
         </div>
       </div>

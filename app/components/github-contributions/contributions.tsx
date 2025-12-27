@@ -56,10 +56,17 @@ export default function Contributions() {
 
   return (
     <Fragment>
-      <div className="flex items-start gap-3 overflow-x-auto pb-2">
+      <div className="flex items-start gap-3 overflow-x-auto pb-2 flex-wrap md:flex-nowrap">
         <Days />
-        <Calendar contributions={contributions} />
-        <YearSelect selectedYear={year} onYearChange={setYear} />
+
+        {/* On mobile: place YearSelect before calendar (order), on md+ keep YearSelect last */}
+        <div className="order-2 md:order-last w-full md:w-auto">
+          <YearSelect selectedYear={year} onYearChange={setYear} />
+        </div>
+
+        <div className="order-3 md:order-2 w-full md:w-auto">
+          <Calendar contributions={contributions} />
+        </div>
       </div>
       <GithubStats contributions={contributions} />
     </Fragment>

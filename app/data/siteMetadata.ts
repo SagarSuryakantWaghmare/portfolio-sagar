@@ -25,7 +25,7 @@ export const siteMetadata = {
     {
       institution: "Deogiri Institute of Engineering and Management Studies",
       degree: "Bachelor of Technology in Computer Science and Engineering",
-      period: "2022 – 2026",
+      period: "2022 – Present",
       gpa: "8.4/10.0",
       coursework: [
         "Data Structures and Algorithms (DSA)",
@@ -39,12 +39,13 @@ export const siteMetadata = {
       degree: "Class 12th (HSC)",
       period: "2021 – 2022",
       percentage: "86.40%",
+      subject: "Computer Science",
     },
     {
       institution: "Dnyanesh Vidya Mandir, Chhatrapati Sambhaji Nagar, MH",
       degree: "Class 10th (SSC)",
       period: "2019 – 2020",
-      percentage: "91.20%",
+      percentage: "91.40%",
     },
   ],
   
